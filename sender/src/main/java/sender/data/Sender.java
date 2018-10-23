@@ -1,4 +1,4 @@
-package sender;
+package sender.data;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -19,7 +19,7 @@ public class Sender {
 
     @Autowired
     @Qualifier("productExchange")
-    private DirectExchange directExchange;   // configured in Tut4Config
+    private DirectExchange directExchange;
 
     @Scheduled(fixedDelay = 1000, initialDelay = 500)
     public void send() {

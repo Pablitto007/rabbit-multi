@@ -1,4 +1,4 @@
-package receiver.configuration;
+package sender.configuration;
 
 import org.springframework.amqp.core.DirectExchange;
 import org.springframework.amqp.rabbit.annotation.EnableRabbit;
@@ -12,12 +12,11 @@ import org.springframework.context.annotation.Configuration;
 public class SenderConfiguration {
 
     @Autowired
-    private SenderProperties rabbitProperties;
+    private SenderProperties senderProperties;
 
     @Bean
     @Qualifier("productExchange")
     public DirectExchange directExchange(){
-        /*return new DirectExchange("directExchange");*/
-        return new DirectExchange(rabbitProperties.getExchangeName());
+        return new DirectExchange(senderProperties.getExchangeName());
     }
 }

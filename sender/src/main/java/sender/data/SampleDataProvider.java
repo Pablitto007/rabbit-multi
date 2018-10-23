@@ -1,4 +1,4 @@
-package sender;
+package sender.data;
 
 import library.Product;
 
