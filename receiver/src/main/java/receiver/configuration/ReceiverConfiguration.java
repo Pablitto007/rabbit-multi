@@ -21,12 +21,12 @@ public class ReceiverConfiguration {
 
     @Bean
     public Queue autoDeleteQueue1() {
-        return new AnonymousQueue();
+        return new Queue("SaleProductsQueue");
     }
 
     @Bean
     public Queue autoDeleteQueue2() {
-        return new AnonymousQueue();
+        return new Queue("NormalProductsQueue");
     }
 
     @Bean

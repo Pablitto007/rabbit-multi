@@ -14,7 +14,6 @@ public class Product {
     private final Category category;
     private final BigDecimal price;
 
-
     public enum Category {
 
         NORMAL(1), PROMOTION(2), SALE(3);
