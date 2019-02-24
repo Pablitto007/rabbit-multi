@@ -2,10 +2,8 @@ package sender;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.scheduling.annotation.EnableScheduling;
 
-@SpringBootApplication(scanBasePackages={"sender"})
-@EnableScheduling
+@SpringBootApplication
 public class SenderApplication{
 
     public static void main(String[] args) {

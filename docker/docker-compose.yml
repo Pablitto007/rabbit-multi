@@ -1,0 +1,7 @@
+version: "2"
+services:
+  rabbit_multi:
+    image: rabbitmq:3-management
+    ports:
+    - "5600:5672"
+    - "15600:15672"

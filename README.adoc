@@ -1,0 +1,3 @@
+=== Simple training sender-receiver app
+
+==== Two Spring Boot services connected with rabbitmq running on docker image

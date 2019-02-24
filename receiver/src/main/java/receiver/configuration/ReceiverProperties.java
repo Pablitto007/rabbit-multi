@@ -9,4 +9,7 @@ import org.springframework.context.annotation.Configuration;
 @Data
 public class ReceiverProperties {
     private String exchangeName;
+    private String queueSale;
+    private String queueNormal;
+
 }

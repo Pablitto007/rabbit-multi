@@ -1,20 +1,20 @@
 package sender.configuration;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
-@Data
+import java.util.List;
+
+@Getter
+@Setter
 @Configuration
 @ConfigurationProperties(prefix = "rabbit.config")
 public class SenderProperties {
+
     private String exchangeName;
 
-    /*public String getExchangeName() {
-        return exchangeName;
-    }
+    private List<String> queuesNames;
 
-    public void setExchangeName(String exchangeName) {
-        this.exchangeName = exchangeName;
-    }*/
 }
