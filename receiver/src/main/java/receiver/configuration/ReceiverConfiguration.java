@@ -20,27 +20,27 @@ public class ReceiverConfiguration {
     }
 
     @Bean
-    public Queue autoDeleteQueue1() {
-        return new AnonymousQueue();
+    public Queue normalQueue() {
+        return new Queue(receiverProperties.getQueueNormal());
     }
 
     @Bean
-    public Queue autoDeleteQueue2() {
-        return new AnonymousQueue();
+    public Queue saleQueue() {
+        return new Queue(receiverProperties.getQueueSale());
     }
 
     @Bean
-    public Binding binding1(DirectExchange exchange, Queue autoDeleteQueue1) {
+    public Binding binding1(DirectExchange exchange, Queue saleQueue) {
         return BindingBuilder
-                .bind(autoDeleteQueue1)
+                .bind(saleQueue)
                 .to(exchange)
                 .with(Product.Category.SALE.name());
     }
 
     @Bean
-    public Binding binding2(DirectExchange exchange, Queue autoDeleteQueue2) {
+    public Binding binding2(DirectExchange exchange, Queue normalQueue) {
         return BindingBuilder
-                .bind(autoDeleteQueue2)
+                .bind(normalQueue)
                 .to(exchange)
                 .with(Product.Category.NORMAL.name());
     }
